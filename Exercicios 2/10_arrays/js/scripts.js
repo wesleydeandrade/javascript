@@ -16,3 +16,4 @@ arr[0] = "Teste";
 console.log(arr);
 
 console.log(typeof arr);
+
