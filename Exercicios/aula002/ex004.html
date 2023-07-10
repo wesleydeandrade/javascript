@@ -15,6 +15,14 @@
     <script>
         var nome = window.prompt ('Qual é o seu nome ?')
         document.write( `Seu nome${nome},tem ${nome.length} letras.`)
+        document.write( `Seu nome${nome}, ${nome.toUpperCase} em Maiusculo.`)
+        document.write( `Seu nome${nome},tem ${nome.toLowerCase} em minusculo.`)// uso a crase ${} para colocar a var nome.toUpperCase() maisculas toLowerCase, length tamanho
+
+        n1 = 1542.8
+        n1.toFixed(2).replace('.',',')// usei o .toFixed(2) para colocar 2 casas decimais e .replace('x','y') para mudar uma coisa por outra
+
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // aparecer em real
+
     </script>
 </body>
 </html>
