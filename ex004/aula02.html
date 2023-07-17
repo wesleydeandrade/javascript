@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Sistemas de Médias de Notas</h1>
+    Nota de Português: <input type="number" name="txtpt" id="txtpt">
+    Nota de Matemática: <input type="number" name="txtmat" id="txtmat">
+    <input type="button" value="calcular" onclick="media()">
+    <div id="res"></div>
+</body>
+<script>
+    function media() {
+        var pt = window.document.querySelector('input#txtpt')
+        var mat = window.document.querySelector('input#txtmat')
+        var res = window.document.querySelector('div#res')
+        var pt_nota = Number(pt.value);
+        var mat_nota = Number(mat.value);
+        var nota = (mat_nota + pt_nota)/2;
+        res.innerHTML = `<p> Sua média é de: <strong>${nota} </strong>!.</p>`
+        if ( nota < 5 ){
+            res.innerHTML += `<p> Você não atingiu a <strong>média de 5<Qstrong>. Esta <strong>REPROVADO(A)</strong>.</p>`
+    } else
+                    res.innerHTML += `<p> Você  atingiu a <strong>média <Qstrong>. Esta <strong>APROVADO(A)</strong>.</p>`
+                
+        }
+
+</script>
+</html>
