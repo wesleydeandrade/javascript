@@ -1,0 +1,27 @@
+body{
+     background: rgba(92, 92, 206, 0.774);
+
+}
+
+header{
+    color: aliceblue;
+    text-align: center;
+
+}
+
+section{
+    color: rgba(0, 0, 0, 0.829);
+    background: white;
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.39);
+
+}
+
+footer{
+    color: aliceblue;
+    text-align: center;
+
+}
