@@ -7,18 +7,32 @@
     
     <title>Horário</title>
 </head>
-<body onload="carregar()">
+<body >
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Verificação de Idade</h1>
 
     </header>
     <section>
-        <div id="msg">
-            teste....
+        <div id="dados">
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" placeholder="xxxx">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem" >
+                <label for="fem">Feminino</label>
+
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
 
         </div>
-        <div id="foto">
-            <img id="imagem" src="imagem/manha.png" alt="imagem do Horário">
+        <div id="res">
+            Prença os dados para ter o resultado!
+           
         </div >
 
     </section>

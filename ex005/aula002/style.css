@@ -1,5 +1,5 @@
 body{
-     background: rgba(92, 92, 206, 0.774);
+     background: rgba(47, 80, 39, 0.774);
      font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -12,9 +12,10 @@ header{
 
 section{
     padding-top: 10px;
+    padding-left: 10px;
     color: rgba(0, 0, 0, 0.829);
     background: white;
-    text-align: center;
+    padding-left: 10px;
     width: 700px;
     margin: auto;
     border-radius: 8px;
@@ -22,14 +23,14 @@ section{
 
 }
 
-#msg{
+#dados{
     font-size: 18px;
-    font-weight: bold;
 
 }
 
-#foto{
-    padding-top: 5px;
+#res{
+    font-size: 18px;
+    padding-bottom: 5px;
 }
 
 footer{
