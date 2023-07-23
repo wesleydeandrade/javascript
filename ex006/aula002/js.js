@@ -1,6 +1,13 @@
+/*let botao = document.getElementById('atvb')
+    botao.addEventListener("click", function(){
+        let res= document.getElementById('res')
+        res.classList.toggle("hide");
+    })
+*/
 function tabuada(){
     let num = document.getElementById('txtn')
     let tab = document.getElementById('seltab')
+    
     if (num.value.lengteh == 0){
         window.alert('Por favor, digite um número !.')
     }else{
@@ -18,3 +25,4 @@ function tabuada(){
 
     
 }
+
