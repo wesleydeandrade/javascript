@@ -1,68 +1,62 @@
 //Função que adicona a tarefa
-function addTask(){
+function addTask() {
+  //titulo da tarefa
+  const taskTitle = document.querySelector("#tasks-tittle").value;
 
-    //titulo da tarefa
-    const taskTitle = document.querySelector("#tasks-tittle").value;
+  if (taskTitle) {
+    //clona o template
+    const template = document.querySelector(".template");
 
-    if(taskTitle) {
+    const newTask = template.cloneNode(true);
 
-        //clona o template
-        const template = document.querySelector(".template");
+    //adiciona titulo
+    newTask.querySelector(".tasks-tittle").textContent = taskTitle;
 
-        const newTask = template.cloneNode(true);
+    //remover as classes desnecessárias
+    newTask.classList.remove("template");
+    newTask.classList.remove("hide");
 
-        //adiciona titulo
-        newTask.querySelector(".tasks-tittle").textContent = taskTitle;
+    // adiciona tarefa na lista
+    const list = document.querySelector("#tasks-list");
 
-        //remover as classes desnecessárias
-        newTask.classList.remove("template");
-        newTask.classList.remove("hide");
+    list.appendChild(newTask);
 
-        // adiciona tarefa na lista
-        const list = document.querySelector("#tasks-list");
+    //adicionar o evento de remover
+    const removeBtn = newTask
+      .querySelector(".remove-btn")
+      .addEventListener("click", function () {
+        removeTask(this);
+      });
 
-        list.appendChild(newTask);
+    //adicionar evento de completar tarefa
+    const doneBtn = newTask
+      .querySelector(".done-btn")
+      .addEventListener("click", function () {
+        completeTask(this);
+      });
 
-        //adicionar o evento de remover
-        const removeBtn = newTask.querySelector(".remove-btn").addEventListener("click", function(){
-
-            removeTask(this);
-        })
-
-        //adicionar evento de completar tarefa
-        const doneBtn = newTask.querySelector(".done-btn").addEventListener("click", function(){
-
-            completeTask(this);
-
-        })
-
-
-        //limpar texto
-        document.querySelector("#tasks-tittle").value = "";
-    }
+    //limpar texto
+    document.querySelector("#tasks-tittle").value = "";
+  }
 }
 
 // função de remover tarefa
-function removeTask(task){
-    
-    task.parentNode.remove(true);
+function removeTask(task) {
+  task.parentNode.remove(true);
 }
 
 //função de completar tarefa
-function completeTask(task){
-    const taskToComplete = task.parentNode;
+function completeTask(task) {
+  const taskToComplete = task.parentNode;
 
-    taskToComplete.classList.toggle("done");
+  taskToComplete.classList.toggle("done");
 }
-
-
 
 // enevento de adicionar a terefa
 const addBtn = document.querySelector("#add-btn");
 
-addBtn.addEventListener("click", function(e) {
+addBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
-    e.preventDefault();
-
-    addTask();
+  addTask();
 });

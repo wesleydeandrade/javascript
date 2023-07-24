@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Tabuada</title>
 </head>
-<body >
+
+<body>
     <header>
         <h1>Tabuada</h1>
 
@@ -15,12 +17,19 @@
     <section>
         <div id="dados">
             <p>Número: <input type="number" name="num" id="txtn"></p>
-            <p><input type="button" value="Gerar Tabuada" id="atvb"  onclick="tabuada()"></p>
-        
+            
+            <p><input type="button" value="Gerar Tabuada" id="atvb" class="" onclick="tabuada()"></p>
+            
+            <p><input type="button" value="Gerar Tabuada" id="atvb2" class="hide" onclick="tabuada()"> <button id="limpar" class="hide" onclick="limpar()">Limpar</button></p>
+
+            
+
+            
+
         </div>
-        <div id="res">
+        <div id="res" class="hide">
             <select name="tabuada" id="seltab" size="10"></select>
-        </div >
+        </div>
 
     </section>
     <footer>
@@ -29,4 +38,5 @@
     </footer>
 </body>
 <script src="js.js"></script>
+
 </html>
