@@ -1,0 +1,42 @@
+
+
+var res = document.getElementById('res')
+var valor = []
+var num = document.getElementById('textn')
+var tab = document.getElementById('seltab')
+
+function adicionar(){
+   
+    if( num.value > 100 || num.value <= 0 || num.value == valor){
+        window.alert(' Digite um número valido!')
+    } else{
+        valor.push(num.value)
+        var item = document.createElement('option')
+        item.text = `valor ${num.value} adicionado`
+        tab.appendChild(item)
+
+    }
+    num.value = ''
+    num.focus()
+}
+
+function finalizar(){
+    if(valor == 0){
+        window.alert ('Digite um número antes de finalizar')
+
+    }else{
+        var maior = valor.sort()
+        
+        res.innerHTML = ''
+        
+        res.innerHTML += `<p>O maior número é ${maior[maior.length - 1]}</p>`
+
+        res.innerHTML += `<p>O menor número é ${maior[0]}</p>`
+
+        res.innerHTML += `<p>Foram adicionados, ${valor.length}, numeros</p>`
+
+
+
+        
+    }
+}
